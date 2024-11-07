@@ -20,7 +20,7 @@ from sklearn.metrics import confusion_matrix,classification_report
 
 st.header("Mental Health Survey")
 
-df=pd.read_csv("C:/Users/sarth/OneDrive/Desktop/work/health-2.0/Survey 2/Dataset1.csv")
+df=pd.read_csv("Dataset1.csv")
 
 df_initial = df
 
@@ -138,7 +138,7 @@ selected_symptoms = []
 for group in selected_symptom_groups:
     selected_symptoms += symptom_categories[group]
 
-df = pd.read_csv("C:/Users/sarth/OneDrive/Desktop/work/health-2.0/Survey 2/Dataset1.csv")
+df = pd.read_csv("Dataset1.csv")
 
 # Sidebar - User input options
 st.sidebar.title("Filter Data")
@@ -206,7 +206,7 @@ z = int(st.slider("Select the Test Split value", 60.0, 80.0, 70.0))
 
 sta = int(st.slider("Select Random state value", 16, 64, 42))
 
-df_modified = pd.read_csv('C:/Users/sarth/OneDrive/Desktop/work/health-2.0/Survey 2/Dataset1.csv')
+df_modified = pd.read_csv('Dataset1.csv')
 
 symptoms_columns = stress_symptoms + anxiety_symptoms + depression_symptoms + life_affecting_symptoms + boolean_symptoms
 symptoms_data = df_modified[symptoms_columns]
